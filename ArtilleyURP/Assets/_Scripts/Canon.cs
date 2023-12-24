@@ -7,6 +7,7 @@ public class Canon : MonoBehaviour
     [SerializeField] private GameObject BalaPrefab;
     private GameObject puntaCanon;
     private float rotacion;
+    private int disparosHechos = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +28,21 @@ public class Canon : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject temp = Instantiate(BalaPrefab, puntaCanon.transform.position, transform.rotation);
-            Rigidbody tempRB = temp.GetComponent<Rigidbody>();
-            Vector3 direccionDisparo = transform.rotation.eulerAngles;
-            direccionDisparo.y = 90 - direccionDisparo.x;
-            tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBala;
+            if (disparosHechos < AdministradorJuego.DisparosPorJuego)
+            {
+                GameObject temp = Instantiate(BalaPrefab, puntaCanon.transform.position, transform.rotation);
+                Rigidbody tempRB = temp.GetComponent<Rigidbody>();
+                Vector3 direccionDisparo = transform.rotation.eulerAngles;
+                direccionDisparo.y = 90 - direccionDisparo.x;
+                tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBala;
+                disparosHechos += 1;
+            }
+            else
+            {
+                Debug.Log("Ya se acabaron las balas");
+            }
+                
+            
         }
         
     }
