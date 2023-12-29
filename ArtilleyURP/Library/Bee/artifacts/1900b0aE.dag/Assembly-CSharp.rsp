@@ -365,6 +365,8 @@
 "Assets/_Scripts/AdministradorJuego.cs"
 "Assets/_Scripts/Bala.cs"
 "Assets/_Scripts/Canon.cs"
+"Assets/_Scripts/Rastro.cs"
+"Assets/_Scripts/SeguirCamara.cs"
 -langversion:9.0
 
 /deterministic
