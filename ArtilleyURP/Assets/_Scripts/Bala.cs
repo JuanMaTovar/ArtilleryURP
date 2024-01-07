@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Bala : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject particulasExplosion;
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        if (collision.gameObject.CompareTag("Suelo"))
+        {
+            Invoke("Explotar", 2);
+        }
+        if (collision.gameObject.CompareTag("Obstaculo") || collision.gameObject.CompareTag("Objetivo")) Explotar();
+    }
+    public void Explotar()
+    {
+        GameObject particulas = Instantiate(particulasExplosion, transform.position, Quaternion.identity) as GameObject;
+        Canon.Bloqueado = false;
+        SeguirCamara.objetivo = null;
+        Destroy(this.gameObject);
     }
 }
