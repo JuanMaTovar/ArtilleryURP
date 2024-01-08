@@ -67,6 +67,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d3d012d1-7fe7-4f1e-9993-1be81f7ee152",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Disparar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9a2932a3-4125-40b6-98aa-10a4cde7eacb",
                     "path": "",
                     "interactions": "",
@@ -143,6 +154,39 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "ControlXbox",
+                    "id": "4f494a98-799c-4a68-9793-b29c0d58e168",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Apuntar",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "181cc6b5-7d1d-4902-a3ba-d550f528aace",
+                    "path": "<XInputController>/rightStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Apuntar",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "9b74837d-ba4a-41ab-ba21-44303f4f7ec1",
+                    "path": "<XInputController>/rightStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Apuntar",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "Control",
                     "id": "0e8fe735-d15c-4a59-ab32-8de2d872477f",
                     "path": "1DAxis",
@@ -168,6 +212,39 @@
                     "name": "positive",
                     "id": "7ad3e7d0-6bce-4cec-95bc-f53830db32dc",
                     "path": "<Gamepad>/leftStick/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ModificarFuerza",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "ControlXbox",
+                    "id": "c10c718a-16d8-48df-a8c1-cd16d66b9d6c",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ModificarFuerza",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "57b8714f-ca99-4a37-8491-0c6f0538b22d",
+                    "path": "<XInputController>/leftStick/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ModificarFuerza",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "0df8315f-2274-4aae-9177-63ea7f369fe6",
+                    "path": "<XInputController>/leftStick/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

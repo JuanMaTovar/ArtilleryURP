@@ -369,6 +369,8 @@
 "Assets/_Scripts/AdministradorJuego.cs"
 "Assets/_Scripts/Bala.cs"
 "Assets/_Scripts/Canon.cs"
+"Assets/_Scripts/MenuPausa.cs"
+"Assets/_Scripts/MenuPrincipal.cs"
 "Assets/_Scripts/Objetivo.cs"
 "Assets/_Scripts/Obstaculo.cs"
 "Assets/_Scripts/Rastro.cs"
