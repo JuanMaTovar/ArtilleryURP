@@ -6,6 +6,10 @@ using UnityEngine.SceneManagement;
 public class MenuPausa : MonoBehaviour
 {
     public GameObject menuPausa;
+    public GameObject menuGanar;
+    public GameObject menuPerder;
+    
+    
     //public GameObject menuOpciones;
 
     public void MostrarMenuPausa()
@@ -13,14 +17,23 @@ public class MenuPausa : MonoBehaviour
         menuPausa.SetActive(true);
         //if (menuOpciones.activeInHierarchy) menuOpciones.SetActive(false);
     }
+    public void IniciarJuego()
+    {
+        
+        SceneManager.LoadScene(1);
+        
 
+    }
     public void OcultarMenuPausa()
     {
         menuPausa.SetActive(false);
     }
     public void RegresarAPantallaPrincipal()
     {
+        
         SceneManager.LoadScene(0);
+
+        
     }
 
     public void MostrarMenuOpciones()
