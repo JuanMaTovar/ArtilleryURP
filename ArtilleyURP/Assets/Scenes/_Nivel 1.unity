@@ -1476,6 +1476,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3769985122378376961, guid: 1e5b1b0a539ba094e96ae98548eca940,
         type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 2121858001}
+    - target: {fileID: 3769985122378376961, guid: 1e5b1b0a539ba094e96ae98548eca940,
+        type: 3}
       propertyPath: BalaPrefab
       value: 
       objectReference: {fileID: 3948975375958814114, guid: e821d4e6bec2a9b449ae4f1f69443a5a,
@@ -4127,7 +4132,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 629263012}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:

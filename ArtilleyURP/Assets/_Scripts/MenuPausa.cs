@@ -19,7 +19,7 @@ public class MenuPausa : MonoBehaviour
     }
     public void IniciarJuego()
     {
-        
+        AdministradorJuego.DisparosPorJuego = 3;
         SceneManager.LoadScene(1);
         
 

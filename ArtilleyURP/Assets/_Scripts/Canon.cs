@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Canon : MonoBehaviour
 {
@@ -9,12 +10,16 @@ public class Canon : MonoBehaviour
 
     public AudioClip clipDisparo;
     private GameObject SonidoDisparo;
+    
     private AudioSource SourceDisparo;
 
     [SerializeField] private GameObject BalaPrefab;
     public GameObject ParticulasDisparo;
     private GameObject puntaCanon;
     private float rotacion;
+    public Slider slider;
+    private float fuerza;
+    
 
     public CanonControls canonControls;
     private InputAction apuntar;
@@ -35,6 +40,8 @@ public class Canon : MonoBehaviour
         modificarFuerza.Enable();
         disparar.Enable();
         disparar.performed += Disparar;
+        
+        
     }
 
     // Start is called before the first frame update
@@ -43,12 +50,17 @@ public class Canon : MonoBehaviour
         puntaCanon = transform.Find("PuntaCanon").gameObject;
         SonidoDisparo = GameObject.Find("SonidoDisparo");
         SourceDisparo = SonidoDisparo.GetComponent<AudioSource>();
+        slider = GetComponent<Slider>(); //Obtengo el elemento Slider del UI
+       
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        //Debug.Log(modificarFuerza.ReadValue<float>());
+       
+        fuerza += modificarFuerza.ReadValue<float>() * slider.value; //tomar en cuenta el slider para la fuerza
         rotacion += apuntar.ReadValue<float>() * AdministradorJuego.VelocidadRotacion;
         if (rotacion <= 90 && rotacion >= 0)
         {
@@ -56,10 +68,7 @@ public class Canon : MonoBehaviour
         }
         if (rotacion > 90) rotacion = 90;
         if (rotacion < 0) rotacion = 0;
-
-
-
-
+        
     }
 
     private void Disparar(InputAction.CallbackContext context)
@@ -78,4 +87,6 @@ public class Canon : MonoBehaviour
         //SourceDisparo.PlayOneShot(clipDisparo);
         Bloqueado = true;
     }
+
+   
 }

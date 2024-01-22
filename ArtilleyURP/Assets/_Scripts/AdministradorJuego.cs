@@ -32,7 +32,7 @@ public class AdministradorJuego : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(DisparosPorJuego < 0)
+        if(DisparosPorJuego <= 0 && Canon.Bloqueado == false)
         {
             PerderJuego();
         }
