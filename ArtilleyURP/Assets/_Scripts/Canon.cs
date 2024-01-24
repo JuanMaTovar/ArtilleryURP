@@ -50,7 +50,7 @@ public class Canon : MonoBehaviour
         puntaCanon = transform.Find("PuntaCanon").gameObject;
         SonidoDisparo = GameObject.Find("SonidoDisparo");
         SourceDisparo = SonidoDisparo.GetComponent<AudioSource>();
-        slider = GetComponent<Slider>(); //Obtengo el elemento Slider del UI
+       // slider = GetComponent<Slider>(); //Obtengo el elemento Slider del UI
        
        
     }
@@ -59,8 +59,10 @@ public class Canon : MonoBehaviour
     void Update()
     {
         //Debug.Log(modificarFuerza.ReadValue<float>());
-       
-        fuerza += modificarFuerza.ReadValue<float>() * slider.value; //tomar en cuenta el slider para la fuerza
+
+        //fuerza += modificarFuerza.ReadValue<float>() * slider.value; //tomar en cuenta el slider para la fuerza
+        slider.value += modificarFuerza.ReadValue<float>() * slider.value;
+        
         rotacion += apuntar.ReadValue<float>() * AdministradorJuego.VelocidadRotacion;
         if (rotacion <= 90 && rotacion >= 0)
         {
@@ -81,7 +83,7 @@ public class Canon : MonoBehaviour
         direccionDisparo.y = 90 - direccionDisparo.x;
         Vector3 direccionParticulas = new Vector3(-90 + direccionDisparo.x, 90, 0);
         GameObject Particulas = Instantiate(ParticulasDisparo, puntaCanon.transform.position, Quaternion.Euler(direccionParticulas), transform);
-        tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBala;
+        tempRB.velocity = direccionDisparo.normalized * AdministradorJuego.VelocidadBala * slider.value;
         AdministradorJuego.DisparosPorJuego--;
         SourceDisparo.Play();
         //SourceDisparo.PlayOneShot(clipDisparo);
