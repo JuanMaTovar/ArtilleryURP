@@ -276,7 +276,7 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""Teclado"",
-                    ""id"": ""fbccfd42-e80b-485b-8b39-7f70d17d4bd6"",
+                    ""id"": ""dbae8394-fa10-4279-95ba-7d2af0d92dcc"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -287,8 +287,8 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""negative"",
-                    ""id"": ""ec9885fd-d216-49db-8b42-bf2221f376e2"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""id"": ""496c5216-e95c-4dab-824f-ec6717423c08"",
+                    ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -298,8 +298,8 @@ public partial class @CanonControls: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": ""positive"",
-                    ""id"": ""10a2ef72-57a0-4dd7-847f-2ea4a10eb07d"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""id"": ""91067ed5-55c1-447d-8786-677156248491"",
+                    ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
