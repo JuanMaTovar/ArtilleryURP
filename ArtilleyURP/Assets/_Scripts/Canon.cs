@@ -43,6 +43,10 @@ public class Canon : MonoBehaviour
         
         
     }
+    private void OnDisable()
+    {
+        disparar.performed -= Disparar;
+    }
 
     // Start is called before the first frame update
     void Start()
